@@ -1,0 +1,19 @@
+{% extends "entries/base.html" %}
+{% block content %}
+	<div class="col-md-8">
+
+		<h1 class="my-4">
+		</h1>
+		<div class="card mb-4">
+				
+			<div class="card-body">
+				<h2 class="card-title">{{object.entry_title}}</h2>
+				<p class="card-text">{{object.entry_text | linebreaks}}</p>
+			</div>
+			<div class="card-footer text-muted">
+				Posted on {{entry.entry_date}} by
+				<a href="#">{{entry.entry_author}}</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

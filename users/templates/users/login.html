@@ -1,0 +1,23 @@
+{% extends "entries/base.html" %}
+{% block content %}
+	<div class="col-md-8">
+
+		<h1 class="my-4">
+		</h1>
+		<div class="card mb-4">
+				
+			<h4 class="card-header">
+				Login to Your Account
+			</h4>
+			<div class="card-body">
+				<form method="POST">
+					{% csrf_token %}
+					{{form.as_p}}
+					<button type="submit" class="btn btn-primary">Login</button>
+					<button type="submit" class="btn btn-info"><a href="{% url 'register' %}" style="color:white;text-decoration:none">SignUp</a></button>
+
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
